@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ---------------------------GENERAL STYLES--------------------------------- */
+section {
+  padding: 2rem 5rem;
+  min-height: 60vh;
+}
+
+header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./images/heroImg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 3rem 5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+#nav-links li {
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+nav > button {
+  background-color: brown;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.7rem;
+  border: none;
+  cursor: pointer;
+  transition: all 400ms ease;
+  border: 1px solid transparent;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+nav > button:hover {
+  background-color: white;
+  color: brown;
+  border: 1px solid brown;
+}
+
+/* ---------------------------- HERO SECTION------------------- */
+#hero-section {
+  text-align: center;
+  /* background-color: red; */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#hero-section > p {
+  max-width: 600px;
+  margin: 1rem 0;
+}
+
+#hero-section > button {
+  margin: 2rem 0;
+}
+
+/* #hero-btn {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  transition-property: width;
+  transition-duration: 3s;
+  transition-delay: 2s;
+  transition-timing-function: ease;
+
+  transition: all 3s ease 2s;
+} */
+
+/* #hero-btn:hover {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+} */
+
+#about-section {
+  background-color: #edebeb;
+  display: grid;
+  /* grid-template-columns: auto auto; */
+  grid-template-columns: repeat(4, 1fr);
+  /* row-gap: 4rem;
+  column-gap: 4rem; */
+  gap: 4rem;
+  align-items: center;
+}
+
+.about {
+  text-align: center;
+}
+.about i {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.about h2 {
+  font-weight: 300;
+  color: red;
+  margin: 1rem 0;
+}
+.about p {
+  color: rgb(117, 116, 116);
+  letter-spacing: 0.07rem;
+}
+
+/* --------------------------MENU SECTION------------------------ */
+#menu-section {
+  background-color: white;
+  padding-top: 5rem;
+}
+#menu-section h2 {
+  text-align: center;
+}
+#menu-section h1 {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: bolder;
+  color: lightgray;
+}
+
+#menus {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* row-gap: 1rem; */
+}
+
+.menu {
+  display: flex;
+}
+.menu .content {
+  background-color: #edebeb;
+  padding: 1rem 2rem;
+}
+.menu im g {
+  width: 660px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
