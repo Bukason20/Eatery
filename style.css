@@ -5,6 +5,10 @@
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ---------------------------GENERAL STYLES--------------------------------- */
 section {
   padding: 2rem 5rem;
@@ -36,6 +40,10 @@ nav {
 #nav-links li {
   margin: 0 10px;
   font-size: 0.9rem;
+}
+#nav-links a {
+  text-decoration: none;
+  color: white;
 }
 nav > button {
   background-color: brown;
@@ -130,17 +138,42 @@ nav > button:hover {
 }
 #menu-section h2 {
   text-align: center;
+  position: relative;
+  /* background-color: green; */
+  padding-top: 1rem;
+  position: relative;
+  top: 30px;
+  z-index: 100;
+}
+
+#menu-section h2::before {
+  content: "";
+  width: 100px;
+  height: 5px;
+  border-radius: 20px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 45%;
+  margin: auto;
+  display: block;
 }
 #menu-section h1 {
   text-align: center;
+  /* background-color: red; */
   font-size: 8rem;
+  /* line-height: 4rem; */
   font-weight: bolder;
   color: lightgray;
+  position: relative;
+  /* z-index: 100; */
 }
 
 #menus {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  top: -50px;
   /* row-gap: 1rem; */
 }
 
@@ -151,10 +184,96 @@ nav > button:hover {
   background-color: #edebeb;
   padding: 1rem 2rem;
 }
-.menu im g {
+.menu img {
   width: 660px;
   height: 200px;
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+#pos-section {
+  background-color: green;
+  position: relative;
+}
+
+#pos-div1 {
+  height: 200px;
+  width: 100px;
+  background-color: orange;
+  top: 70px;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  /* transition: all 6s ease; */
+}
+
+#pos-div2 {
+  height: 100px;
+  width: 200px;
+  background-color: purple;
+  top: 70px;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+/* #pos-div:hover {
+  top: -20px;
+} */
+
+#pos-section > p {
+  line-height: 0.3rem;
+}
+
+/* --------------------FOOTER------------------- */
+footer {
+  background-color: black;
+  color: white;
+  min-height: 50vh;
+  padding: 2rem 5rem;
+}
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#about-opening {
+  display: flex;
+}
+#about-footer {
+  max-width: 300px;
+}
+#about-footer p {
+  line-height: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+#about-icons {
+  display: flex;
+  gap: 1rem;
+}
+#about-icons > div {
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* color: red; */
+}
+#about-icons > div:hover {
+  background-color: white;
+  /* color: black; */
+}
+
+#about-icons > div i {
+  color: red;
+
+  font: 0.6rem;
+}
+
+#about-icons > div:hover i {
+  color: black;
 }
